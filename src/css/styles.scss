@@ -1,15 +1,57 @@
 // VARIABLES
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf');
+}
 
-$black: #2d2d2d;
-$grey: #95a5a6;
+$background: #252830;
+$black: #1d1d1d;
+$black-contrast: #434857;
+$grey: #c2c2c2;
+$white: #e0e0e0;
+
+// Helper
+
+.no-padding{
+  padding: 0;
+}
+
+.no-margin{
+  margin: 0;
+}
+
+.align-center{
+  text-align: center;
+}
+
+.align-right{
+  text-align: right;
+}
+
+.align-left{
+  text-align: left;
+}
+
+.align-justify{
+  text-align: justify;
+}
+
+.margin-center{
+  margin: 0 auto;
+}
 
 // General
 
 body{
   font-family: Roboto;
   font-size: 17px;
+  background: $background;
+  color: $white;
+}
+
+.content{
+  padding: 0 4%;
 }
 
 // Navbar
@@ -23,9 +65,74 @@ body{
 // Title
 
 .tab_title{
-  font-size: 25px;
+  font-size: 23px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 300;
   font-style: italic;
   color: $grey;
 }
+
+// Show score
+
+.scoring-blackboard{
+  height: 71px;
+}
+
+.score{
+  color: $black;
+  font-weight: 900;
+  font-size: 50px;
+  width: 150px;
+  background: $white;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.separator_score{
+  height: 71px;
+  padding-bottom: 40px;
+  font-size: 60px;
+}
+
+
+// Player on court
+
+.player_on_court{
+  background-color: $black-contrast;
+  width: 600px;
+  height: 100px;
+  margin: 20px auto;
+  position: relative;
+
+  .player_1{
+    position: absolute;
+    left: 10%;
+  }
+
+  .player_2{
+    position: absolute;
+    left: 30%;
+  }
+  .player_3{
+    position: absolute;
+    left: 50%;
+  }
+  .player_4{
+    position: absolute;
+    left: 70%;
+  }
+  .player_5{
+    position: absolute;
+    left: 90%;
+  }
+}
+
+// Button ajax
+
+.button-ajax{
+  background: #2e6da4;
+  width: 17%;
+  height: 17%;
+  margin: 5px;
+}
+

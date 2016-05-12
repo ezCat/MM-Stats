@@ -1,7 +1,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
     <link rel="stylesheet" href="../dist/css/styles.css">
 </head>
 
@@ -11,13 +13,19 @@
     <div class="logo"></div>
 </div>
 
-<div class="container">
+<div class="content">
 
     <!-- Score tab -->
-    <div class="row">
-        <div class="col-md-5 col-sm-5 score_own">70</div>
-        <div class="col-md-2 col-sm-2 split_score">-</div>
-        <div class="col-md-5 col-sm-5 score_opponent">68</div>
+    <div class="row scoring-blackboard align-center">
+        <div class="col-md-5 col-sm-5">
+            <div class="score">70</div>
+        </div>
+        <div class="col-md-2 col-sm-2 separator_score">
+            -
+        </div>
+        <div class="col-md-5 col-sm-5">
+            <div class="score">68</div>
+        </div>
     </div>
 
     <!-- Player tab -->
@@ -34,20 +42,20 @@
         <div class="tab_title">Scoring</div>
     </div>
     <div class="row">
-        <div class="col-md-4 col-sm-4">LF <i class="fa fa-check"></i></div>
-        <div class="col-md-4 col-sm-4">2pt <i class="fa fa-check"></i></div>
-        <div class="col-md-4 col-sm-4">3pt <i class="fa fa-check"></i></div>
+        <div class="col-md-4 col-sm-4 button-ajax">LF <i class="fa fa-check-circle-o"></i></div>
+        <div class="col-md-4 col-sm-4 button-ajax">2pt <i class="fa fa-check-circle-o"></i></div>
+        <div class="col-md-4 col-sm-4 button-ajax">3pt <i class="fa fa-check-circle-o"></i></div>
     </div>
     <div class="row">
-        <div class="col-md-4 col-sm-4">LF <i class="fa fa-forbidden"></i></div>
-        <div class="col-md-4 col-sm-4">2pt <i class="fa fa-forbidden"></i></div>
-        <div class="col-md-4 col-sm-4">3pt <i class="fa fa-forbidden"></i></div>
+        <div class="col-md-4 col-sm-4 button-ajax">LF <i class="fa fa-ban" aria-hidden="true"></i></div>
+        <div class="col-md-4 col-sm-4 button-ajax">2pt <i class="fa fa-ban" aria-hidden="true"></i></div>
+        <div class="col-md-4 col-sm-4 button-ajax">3pt <i class="fa fa-ban" aria-hidden="true"></i></div>
     </div>
 
 
     <!-- Rebond & passe tab -->
     <div class="row">
-        <div class="col-md-8 col-sm-8">
+        <div class="col-md-8 col-sm-8 no-padding">
             <div class="tab_title">Rebond</div>
         </div>
         <div class="col-md-4 col-sm-4">
@@ -55,9 +63,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4 col-sm-4">Rebond Défensif</div>
-        <div class="col-md-4 col-sm-4">Rebond Offensif</div>
-        <div class="col-md-4 col-sm-4">Passe décisive</div>
+        <div class="col-md-4 col-sm-4 button-ajax">Rebond Défensif</div>
+        <div class="col-md-4 col-sm-4 button-ajax">Rebond Offensif</div>
+        <div class="col-md-4 col-sm-4 button-ajax">Passe décisive</div>
     </div>
 
     <!-- Defense tab -->
@@ -74,14 +82,24 @@
         <div class="tab_title">Fautes & turnovers</div>
     </div>
     <div class="row">
-        <div class="col-md-4 col-sm-4">Faute <i class="fa fa-arrow-right"></i> LF</div>
-        <div class="col-md-4 col-sm-4">Faute sans LF</div>
-        <div class="col-md-4 col-sm-4">Turnover</div>
+        <div class="col-md-4 col-sm-4 button-ajax">Faute <i class="fa fa-arrow-right"></i> LF</div>
+        <div class="col-md-4 col-sm-4 button-ajax">Faute sans LF</div>
+        <div class="col-md-4 col-sm-4 button-ajax">Turnover</div>
     </div>
 </div>
 
 
 <script src="../dist/js/main.js"></script>
+<script>
+    screen.orientation.lock('landscape');
+    var show = function () {
+        console.log("Orientation type is " + screen.orientation.type);
+        console.log("Orientation angle is " + screen.orientation.angle);
+    }
+
+    screen.orientation.addEventListener("change", show);
+    window.onload = show;
+</script>
 </body>
 
 </html>
